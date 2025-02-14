@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4: Contar Tipos de Datos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+      padding: 0;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    p,
+    pre {
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+
+    code {
+      background-color: #eef;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    #resultado4 {
+      font-weight: bold;
+      color: #27ae60;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🗂️ Ejercicio 4: Contar Tipos de Datos en un Array</h1>
+  <p><strong>Enunciado:</strong><br>
+    Crea una función llamada <code>contarTipos</code> que reciba un array con diferentes tipos de datos (números,
+    strings, booleanos, etc.) y devuelva un objeto que indique cuántos de cada tipo hay.</p>
+
+  <p>Usa <code>typeof</code> y <code>forEach()</code>.</p>
+
+  <p><strong>Ejemplo:</strong></p>
+  <pre><code>contarTipos([1, "hola", true, 42, false, "mundo", null, undefined]);
+// Resultado esperado: { number: 2, string: 2, boolean: 2, object: 1, undefined: 1 }</code></pre>
+
+  <h2>Resultado en consola</h2>
+
+  <script src="./ejercicio_4.js"></script>
+</body>
+
+</html>
