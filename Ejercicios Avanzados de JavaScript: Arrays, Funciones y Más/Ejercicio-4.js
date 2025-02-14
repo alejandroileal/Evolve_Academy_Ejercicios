@@ -49,4 +49,4 @@ const filtrarTareas = (tareas) => {
 const contarPendientes = (tareas) =>
   tareas.filter((tarea) => !tarea.completada).length;
 
-console.log(contarPendientes(tareas));
+// console.log(contarPendientes(tareas));

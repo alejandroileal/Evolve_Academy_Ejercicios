@@ -16,14 +16,14 @@ const calcularSaldoTotal = (transacciones) => {
   return total;
 };
 
-console.log(calcularSaldoTotal(transacciones));
+// console.log(calcularSaldoTotal(transacciones));
 
 // Filtra las transacciones mayores a 100.
 
 const filtrarMayorACien = (transacciones) =>
   transacciones.filter((transtacción) => transtacción > 100);
 
-console.log(filtrarMayorACien(transacciones));
+// console.log(filtrarMayorACien(transacciones));
 
 // Invierte el orden de las transacciones sin usar reverse.
 
@@ -37,4 +37,4 @@ const invertirOrden = (transacciones) => {
   return ordenInvertido;
 };
 
-console.log(invertirOrden(transacciones));
+// console.log(invertirOrden(transacciones));

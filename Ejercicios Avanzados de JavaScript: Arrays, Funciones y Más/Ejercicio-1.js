@@ -61,6 +61,7 @@ filtrarPorPrecioMayor(20);
 
 // 4. Ordenar los productos por cantidad, de mayor a menor.
 
-const ordenarMayorAMenor = () => inventario.sort((a, b) => b.precio - a.precio);
+const ordenarMayorAMenor = () =>
+  inventario.sort((a, b) => b.cantidad - a.cantidad);
 
 console.log(ordenarMayorAMenor());

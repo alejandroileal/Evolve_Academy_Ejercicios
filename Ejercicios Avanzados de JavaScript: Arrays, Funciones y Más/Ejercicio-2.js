@@ -13,24 +13,24 @@ const estudiantes = [
 const filtrarAprobados = (listaDeEstudiantes) =>
   listaDeEstudiantes.filter((estudiante) => estudiante.nota >= 6);
 
-console.log(filtrarAprobados(estudiantes));
+// console.log(filtrarAprobados(estudiantes));
 
 // Calcula la nota media de toda la clase.
 
 const calcularMedia = (listaDeEstudiantes) => {
   let sumaTotal = 0;
 
-  for (let i = 0; i < listaDeEstudiantes.length; i++) {
-    sumaTotal += listaDeEstudiantes[i].nota;
-  }
+  listaDeEstudiantes.forEach((estudiante) => {
+    sumaTotal += estudiante.nota;
+  });
   return sumaTotal / listaDeEstudiantes.length;
 };
 
-console.log(calcularMedia(estudiantes));
+// console.log(calcularMedia(estudiantes));
 
 // Ordena los estudiantes de mayor a menor calificación.
 
 const ordenarDescendente = (listaDeEstudiantes) =>
   listaDeEstudiantes.sort((a, b) => b.nota - a.nota);
 
-console.log(ordenarDescendente(estudiantes));
+// console.log(ordenarDescendente(estudiantes));
