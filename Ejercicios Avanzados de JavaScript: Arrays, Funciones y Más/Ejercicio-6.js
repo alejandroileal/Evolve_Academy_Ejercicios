@@ -10,19 +10,21 @@ const encontrarTemperaturaAlta = (temperaturas) => {
   let primerNúmero = temperaturas[0];
   let númeroMayor = primerNúmero;
   let númeroMenor = primerNúmero;
+  let i = 0;
 
-  for (let i = 0; i < temperaturas.length; i++) {
+  temperaturas.forEach((temperatura) => {
     if (númeroMayor < temperaturas[i]) {
       númeroMayor = temperaturas[i];
     } else if (númeroMenor > temperaturas[i]) {
       númeroMenor = temperaturas[i];
     }
-  }
+    i++;
+  });
 
   return { temperaturaAlta: númeroMayor, temperaturaBaja: númeroMenor };
 };
 
-// console.log(encontrarTemperaturaAlta(temperaturas));
+console.log(encontrarTemperaturaAlta(temperaturas));
 
 // Filtra las temperaturas por encima de la media.
 

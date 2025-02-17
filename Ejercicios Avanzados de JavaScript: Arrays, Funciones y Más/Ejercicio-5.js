@@ -6,14 +6,14 @@ const nombres = ["Ana", "Juan", "Pedro", "Andrés"];
 
 // Convierte todos los nombres a mayúsculas usando map.
 
-const nombresEnMayúscula = nombres.map((nombre) => nombre.toLocaleUpperCase());
+const nombresEnMayúscula = nombres.map((nombre) => nombre.toUpperCase());
 
 console.log(nombresEnMayúscula);
 
 // Filtra los nombres que comienzan con la letra "A".
 
 const nombresConLetraA = nombres.filter(
-  (nombre) => nombre[0].toLocaleLowerCase() === "a"
+  (nombre) => nombre[0].toLowerCase() === "a"
 );
 
 console.log(nombresConLetraA);

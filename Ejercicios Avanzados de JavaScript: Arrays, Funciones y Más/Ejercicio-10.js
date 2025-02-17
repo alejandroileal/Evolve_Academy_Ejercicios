@@ -35,7 +35,7 @@ console.log(participantes);
 
 const filterByLetter = (letter) =>
   participantes.filter((nombre) =>
-    nombre.toLocaleLowerCase().includes(letter.toLocaleLowerCase())
+    nombre.toLowerCase().includes(letter.toLowerCase())
   );
 
 console.log(filterByLetter("A"));

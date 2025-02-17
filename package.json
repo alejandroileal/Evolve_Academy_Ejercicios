@@ -1,0 +1,12 @@
+{
+  "name": "evolve_academy_ejercicios",
+  "version": "1.0.0",
+  "description": "Ejercicios de clase - Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Alejandro Irastorza Leal",
+  "license": "ISC",
+  "type": "module"
+}
