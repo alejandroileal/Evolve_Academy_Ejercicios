@@ -8,5 +8,5 @@
   },
   "author": "Alejandro Irastorza Leal",
   "license": "ISC",
-  "type": "module"
+  "type": "commonjs"
 }

@@ -8,7 +8,7 @@ const {
   filtrarPorGénero,
 } = require("./biblioteca.js");
 
-//agregarLibro("El Principito", "Antoine de Saint-Exupéry", "Fantasía");
+// agregarLibro("Al Principito", "Antoine de Saint-Exupéry", "Fantasía");
 
 //console.log(libros);
 

@@ -47,7 +47,7 @@ const buscarPorGénero = (género) =>
   );
 // ✅ Ordenar libros alfabéticamente (sort).
 
-const ordenarAlfabeticamente = () => libros.sort();
+const ordenarAlfabeticamente = () => libros.map((libro) => libro.titulo).sort();
 
 // ✅ Filtrar libros de un género (filter).
 
