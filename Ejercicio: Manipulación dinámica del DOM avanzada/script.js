@@ -26,44 +26,45 @@ const insertionContainerElement = document.getElementById(
 );
 const referenceElement = document.getElementById("reference-element");
 
-const buttonsIds = [
-  "btn-insert-before",
-  "btn-insert-after",
-  "btn-insert-begining",
-  "btn-insert-last",
+const buttons = [
+  {
+    buttonId: "btn-insert-before",
+    action: () =>
+      insertionContainerElement.insertBefore(
+        createElement("Creado elemento antes de referencia"),
+        referenceElement
+      ),
+  },
+  {
+    buttonId: "btn-insert-after",
+    action: () =>
+      referenceElement.insertAdjacentElement(
+        "afterend",
+        createElement("Creado elemento después de referencia")
+      ),
+  },
+  {
+    buttonId: "btn-insert-begining",
+    action: () =>
+      insertionContainerElement.prepend(
+        createElement("Creado elemento al inicio")
+      ),
+  },
+  {
+    buttonId: "btn-insert-last",
+    action: () =>
+      insertionContainerElement.append(
+        createElement("Creado elemento al final")
+      ),
+  },
 ];
 
-buttonsIds.forEach((buttonId) => {
-  document.getElementById(buttonId).addEventListener("click", () => {
-    switch (buttonId) {
-      case buttonsIds[0]:
-        insertionContainerElement.insertBefore(
-          createElement("Creado elemento antes de referencia"),
-          referenceElement
-        );
-        break;
-      case buttonsIds[1]:
-        referenceElement.insertAdjacentElement(
-          "afterend",
-          createElement("Creado elemento después de referencia")
-        );
-        break;
-      case buttonsIds[2]:
-        insertionContainerElement.prepend(
-          createElement("Creado elemento al inicio")
-        );
-        break;
-      case buttonsIds[3]:
-        insertionContainerElement.append(
-          createElement("Creado elemento al final")
-        );
-        break;
-
-      default:
-        console.log("none");
-        break;
-    }
-  });
+buttons.forEach((buttonObject) => {
+  const { buttonId, action } = buttonObject;
+  const button = document.getElementById(buttonId);
+  if (button) {
+    button.addEventListener("click", action);
+  }
 });
 
 // 3
