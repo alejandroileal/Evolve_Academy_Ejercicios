@@ -1,4 +1,4 @@
-// Create elements
+// 1
 
 const createElement = (innerText) => {
   let pElement = document.createElement("p");
@@ -12,8 +12,7 @@ const createButtonElement = document.getElementById("createButton");
 const containerNewsElement = document.getElementById("containerNews");
 
 createButtonElement.addEventListener("click", () => {
-  const currentElements =
-    containerNewsElement.getElementsByClassName("element");
+  const currentElements = containerNewsElement.querySelectorAll(".element");
 
   containerNewsElement.appendChild(
     createElement(`Este es el elemento ${currentElements.length + 1}`)
@@ -37,24 +36,24 @@ const buttonsIds = [
 buttonsIds.forEach((buttonId) => {
   document.getElementById(buttonId).addEventListener("click", () => {
     switch (buttonId) {
-      case "btn-insert-before":
+      case buttonsIds[0]:
         insertionContainerElement.insertBefore(
           createElement("Creado elemento antes de referencia"),
           referenceElement
         );
         break;
-      case "btn-insert-after":
+      case buttonsIds[1]:
         referenceElement.insertAdjacentElement(
           "afterend",
           createElement("Creado elemento después de referencia")
         );
         break;
-      case "btn-insert-begining":
+      case buttonsIds[2]:
         insertionContainerElement.prepend(
           createElement("Creado elemento al inicio")
         );
         break;
-      case "btn-insert-last":
+      case buttonsIds[3]:
         insertionContainerElement.append(
           createElement("Creado elemento al final")
         );
@@ -77,7 +76,6 @@ deleteButtonElement.addEventListener("click", () => {
   const deleteableElementsLength = deleteableElements.length;
 
   if (deleteableElementsLength > 0) {
-    console.log("Sí se puede eliminar");
     deleteableElements[deleteableElementsLength - 1].remove();
   } else {
     alert("No se puede eliminar elementos de una lista vacía");
@@ -97,6 +95,6 @@ replaceButton.addEventListener("click", () => {
 
   ++counter;
   elementToBeReplaced.replaceWith(
-    createElement(`Elemento reemplazado número ${counter}`)
+    createElement(`Elemento Reemplazado Número ${counter}`)
   );
 });

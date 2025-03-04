@@ -1,59 +1,150 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5faf9;
+  color: #1c1c1c;
+  line-height: 1.6;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  background-color: white;
+  height: 4rem;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+
+  img {
+    width: 3rem;
+    height: auto;
+  }
+}
+
+footer {
+  padding-bottom: 20px;
+  p {
+    text-align: center;
+    color: #434343;
+  }
+}
+
+/* ---- Headings ---- */
 h1 {
   text-align: center;
+  color: #2c3e50;
   font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.3rem;
+  border-bottom: 2px solid #259091;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #259091;
 }
 
-button {
-  padding: 1rem;
-  border-radius: 11px;
-  border-width: 1px;
-}
-
+/* ---- Containers ---- */
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  border-radius: 30px;
-  background-color: aquamarine;
-  min-width: 700px;
-  padding-bottom: 1rem;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
 }
 
 #containerNews,
 #insertion-container,
-#container-deleteables {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 0.5rem;
+#container-deleteables,
+#replace-container {
+  padding: 10px;
+  background: #ecf0f1;
+  border-radius: 20px;
+  min-height: 50px;
 }
 
+/* ---- Buttons ---- */
+button {
+  background-color: #259091;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1b6869;
+}
+
+/* ---- Buttons Container ---- */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#createButton,
+#btn-delete,
+#btn-replace {
+  margin-bottom: 15px;
+}
+
+/* ---- Elements ---- */
+
 .element {
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: aliceblue;
-  padding: 1rem;
-  border-radius: 15px;
+  background: #ffffff;
+  padding: 13px 17px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border-left: 4px solid #259091;
+}
+
+.element:hover {
+  background: #f6fafa;
 }
 
 .element-reference {
-  background-color: yellow;
+  font-weight: bold;
+  border-left: 4px solid #ffdd00;
+}
+
+.element-reference:hover {
+  background-color: #fffdf1;
+}
+
+/* ---- Media Querys ---- */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  header {
+    justify-content: start;
+    h1 {
+      font-size: 1rem;
+    }
+    img {
+      display: none;
+    }
+  }
 }
