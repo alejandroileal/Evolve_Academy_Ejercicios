@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio: Manipulación dinámica del DOM avanzada</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+
+  <main>
+    <h1>Manipulación dinámica del DOM avanzada</h1>
+
+    <div id="creation-section" class="container">
+      <h2>Creación simple</h2>
+      <button id="createButton">Crear elemento</button>
+      <div id="containerNews">
+      </div>
+    </div>
+
+    <div id="insertion-section" class="container">
+      <h2>Sección de inserción posicional</h2>
+      <div class="buttons-container">
+        <button id="btn-insert-before">Insertar antes</button>
+        <button id="btn-insert-after">Insertar después</button>
+        <button id="btn-insert-begining">Al inicio</button>
+        <button id="btn-insert-last">Al final</button>
+      </div>
+
+      <div id="insertion-container">
+        <p id="element1" class="element">Primer elemento</p>
+        <p id="reference-element" class="element element-reference">Elemento de referencia</p>
+        <p id="element3" class="element">Tercer elemento</p>
+
+
+      </div>
+
+    </div>
+    <div id="delete-section" class="container">
+      <h2>Sección de eliminación</h2>
+      <button id="btn-delete">Eliminar Último</button>
+
+      <div id="container-deleteables">
+        <p class="element">Elemento Eliminable 1</p>
+        <p class="element">Elemento Eliminable 2</p>
+        <p class="element">Elemento Eliminable 3</p>
+      </div>
+    </div>
+
+    <div id="replace-section" class="container">
+
+      <h2>Sección de reemplazo</h2>
+      <button id="btn-replace">Reemplazar elemento</button>
+
+      <div id="replace-container">
+        <p class="element">Elemento Reemplazable</p>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

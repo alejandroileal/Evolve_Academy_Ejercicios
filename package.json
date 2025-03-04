@@ -8,7 +8,7 @@
   },
   "author": "Alejandro Irastorza Leal",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "moment": "^2.30.1",
     "moment-timezone": "^0.5.47"

@@ -42,7 +42,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding-inline: 20rem;
+  padding-inline: 10rem;
   padding-block: 3rem;
 }
 .exercice {
